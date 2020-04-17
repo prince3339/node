@@ -7,7 +7,7 @@ script:
     - docker images sabbir/node
 
 before_deploy:
-    - docker login -u $DOCKER_HUB_USERNAME -p $DOCKER_HUB_PASSWORD
+    - docker login -u $DOCKER_HUB_USERNAME -p $DOCKER_HUB_PASSWORD docker.io
 
 deploy:
     provider: script
