@@ -5,3 +5,12 @@ services:
 script:
     - docker build -t sabbir/node .
     - docker images sabbir/node
+
+before_deploy:
+    - docker login -u prince3339 dozeeyenokia1100
+
+deploy:
+    provider: script
+    script: docker push sabbir/node
+    on:
+        branch: master
